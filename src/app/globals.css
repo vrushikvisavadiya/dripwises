@@ -3,24 +3,79 @@
 :root {
   --background: #ffffff;
   --foreground: #171717;
+  --font-sans: ui-sans-serif, system-ui, sans-serif;
+  --font-mono: ui-monospace, SFMono-Regular, monospace;
 }
 
+/* Tailwind theme variables injected using @theme inline */
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --font-sans: var(--font-sans);
+  --font-mono: var(--font-mono);
 }
 
+/* Auto switch based on user’s system preference */
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+    --background: #000000;
+    --foreground: #ffffff;
+  }
+}
+
+/* @layer utilities {
+  .text-primary {
+    color: #61dafb;
+  }
+  .text-muted {
+    color: #cfcfcf;
+  }
+} */
+
+@layer utilities {
+  .text-primary {
+    color: #61dafb;
+  }
+  .text-muted {
+    color: #cfcfcf;
+  }
+
+  .gradient-text {
+    @apply bg-gradient-to-l from-white to-cyan-400 bg-clip-text text-transparent;
+  }
+  @keyframes star-movement-bottom {
+    0% {
+      transform: translate(0%, 0%);
+      opacity: 1;
+    }
+    100% {
+      transform: translate(-100%, 0%);
+      opacity: 0;
+    }
+  }
+
+  @keyframes star-movement-top {
+    0% {
+      transform: translate(0%, 0%);
+      opacity: 1;
+    }
+    100% {
+      transform: translate(100%, 0%);
+      opacity: 0;
+    }
+  }
+
+  .animate-star-movement-bottom {
+    animation: star-movement-bottom 6s linear infinite alternate;
+  }
+
+  .animate-star-movement-top {
+    animation: star-movement-top 6s linear infinite alternate;
   }
 }
 
 body {
-  background: var(--background);
+  background-color: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-sans);
 }
