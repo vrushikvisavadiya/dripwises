@@ -124,19 +124,30 @@ export default function Footer() {
       </div>
 
       {/* Bottom */}
-      <div className="border-t border-white/10 py-6 text-center text-xs text-muted-foreground">
-        © 2025 Dripwises. All rights reserved.{" "}
-        <Link href="#" className="hover:text-foreground">
-          Privacy Policy
-        </Link>{" "}
-        ·{" "}
-        <Link href="#" className="hover:text-foreground">
-          Terms of Service
-        </Link>{" "}
-        ·{" "}
-        <Link href="#" className="hover:text-foreground">
-          Cookies
-        </Link>
+      <div className="border-t border-white/10 py-6 text-center text-xs text-muted-foreground space-y-1">
+        <div>
+          © 2025 Dripwises. All rights reserved.{" "}
+          <Link href="#" className="hover:text-foreground">
+            Privacy Policy
+          </Link>{" "}
+          ·{" "}
+          <Link href="#" className="hover:text-foreground">
+            Terms of Service
+          </Link>{" "}
+          ·{" "}
+          <Link href="#" className="hover:text-foreground">
+            Cookies
+          </Link>
+        </div>
+        <div>
+          Made with <span className="text-red-500">❤️</span> by{" "}
+          <Link
+            href="https://www.vrushikvisavadiya.com/"
+            className="hover:text-foreground font-medium"
+          >
+            Vrushik Visavadiya
+          </Link>
+        </div>
       </div>
     </footer>
   );
