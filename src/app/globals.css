@@ -1,12 +1,13 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  /* --background: #ffffff;
+  --foreground: #171717; */
   --font-sans: ui-sans-serif, system-ui, sans-serif;
   --font-mono: ui-monospace, SFMono-Regular, monospace;
 }
 
+@custom-variant dark (&:is(.dark *));
 /* Tailwind theme variables injected using @theme inline */
 @theme inline {
   --color-background: var(--background);
@@ -16,12 +17,12 @@
 }
 
 /* Auto switch based on user’s system preference */
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #000000;
-    --foreground: #ffffff;
-  }
+/* @media (prefers-color-scheme: dark) { */
+:root {
+  --background: #000000;
+  --foreground: #ffffff;
 }
+/* } */
 
 /* @layer utilities {
   .text-primary {
