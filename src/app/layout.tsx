@@ -42,7 +42,7 @@ export const metadata: Metadata = {
     description:
       "Your productivity companion for discovering insights across your digital workspaces.",
     images: ["/og-image.png"],
-    creator: "@dripwises",
+    creator: "@vrushik11",
   },
   keywords: [
     "Dripwises",
@@ -53,7 +53,9 @@ export const metadata: Metadata = {
     "productivity tools",
     "AI-powered summaries",
   ],
-  authors: [{ name: "Dripwises Team" }],
+  authors: [
+    { name: "Vrushik Visavadiya", url: "https://www.vrushikvisavadiya.com/" },
+  ],
   themeColor: "#000000",
   colorScheme: "dark",
 };
